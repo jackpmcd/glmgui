@@ -50,5 +50,3 @@ glmgui::glmGUI()
 It will likely open in another window.
 
 ---
-
-Let me know if you’d like any further details or adjustments to this draft!
