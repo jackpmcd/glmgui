@@ -27,14 +27,25 @@ This update aims to facilitate continued use of the "glmgui" package under curre
 
 ## Installation
 
-To install the updated version:
-1. Clone or download this repository.
-2. Install any dependencies using the `renv` package or a similar environment manager.
-3. Run the installation script or install manually within your R environment.
+To install the updated `glmgui`, please follow these steps:
+
+```R
+# Install devtools if not already installed
+install.packages("devtools")
+
+# Install glmgui from this repository
+devtools::install_github("jackpmcd/glmgui")
+```
 
 ## Usage
 
-This version works similarly to the original "glmgui" package and is intended to be straightforward for users familiar with GLM and the prior package version. For usage instructions, consult the original documentation alongside this README for any changes related to dependencies or compatibility.
+This version works similarly to the original "glmgui" package and is intended to be straightforward for users familiar with GLM and the prior package version. 
+
+To run the glmGUI run this command:
+
+```R
+glmgui::glmGUI()
+```
 
 ---
 
