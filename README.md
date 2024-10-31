@@ -41,11 +41,13 @@ devtools::install_github("jackpmcd/glmgui")
 
 This version works similarly to the original "glmgui" package and is intended to be straightforward for users familiar with GLM and the prior package version. 
 
-To run the glmGUI run this command:
+To start the glmGUI run this command:
 
 ```R
 glmgui::glmGUI()
 ```
+
+It will likely open in another window.
 
 ---
 
