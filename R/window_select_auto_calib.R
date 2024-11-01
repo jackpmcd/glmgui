@@ -43,8 +43,7 @@ function(workspace){
   # svalue(gslider_intervall, index=TRUE)
   # svalue(gslider_intervall) <- 4
 
-  win_SI_1 <- gwindow("Slider with Interval Display")
-  sub_label <- glabel("3. Select Interval Density", container = win_SI_1)
+  sub_label <- glabel("3. TEST", container = win_SI_1)
   font(sub_label) <- c(size = 10, weight = "bold")
 
   gslider_intervall <- gslider(from = 4, to = 20, by = 2, container = win_SI_1)
