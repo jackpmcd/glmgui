@@ -35,8 +35,7 @@ function(workspace){
   font(sub_label) <- c(size=10,weight="bold")
   
   radio_button_field_auto <- gradio(c("Temperature","Lake Level"), container=win_SI_1,horizontal =TRUE, selected=2)
-  gseparator(horizontal=TRUE, container=win_SI_1, expand=TRUE) 
-
+  gseparator(horizontal=TRUE, container=win_SI_1, expand=TRUE)
 
   # interval density selection slider
   sub_label <- glabel("3. Select Interval Density", container = win_SI_1)
