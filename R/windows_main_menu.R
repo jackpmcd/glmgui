@@ -285,12 +285,7 @@ function(version){
   
   #Button for reading the GLM Version of package GLMr; GLMr::glm_version() only runs run_glm(), so that the version is printed to the console, but can't be saved as char or even copied to file via sink()
   gbutton("GLM Version", container = content_project_build2, handler=function(h,...) {
-    libpath = .libPaths()[1]
-    # glmrpath = list.files(path = libpath, pattern='RELEASE',recursive = T)[1]
-    # if (is.na(glmrpath)){gmessage('Cannot find the version. You can run glm_version() in the R console to find out.', title = 'GLM Version')}
-    # else {completepath = paste(libpath,glmrpath, sep = '/')
-    # glmversion = readChar(completepath, nchars = 10)
-    glm_verison <- capture.output(glm_version())
+    glm_verison <- capture.output(glm_version(as_char = TRUE))
     gmessage(glm_version, title = 'GLM Version')})
     
   
