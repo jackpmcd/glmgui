@@ -37,15 +37,24 @@ function(workspace){
   radio_button_field_auto <- gradio(c("Temperature","Lake Level"), container=win_SI_1,horizontal =TRUE, selected=2)
   gseparator(horizontal=TRUE, container=win_SI_1, expand=TRUE) 
 
-  sub_label <-glabel("3. Select Interval Density",container = win_SI_1)
-  font(sub_label) <- c(size=10,weight="bold")
-  gslider_intervall <- gslider(from = 4, to = 20, by = 2, container=win_SI_1) #only even numbers possible: use default value and number/2 parts above and below default value
-  svalue(gslider_intervall, index=TRUE)
-  svalue(gslider_intervall) <- 4
+  # sub_label <-glabel("3. Select Interval Density",container = win_SI_1)
+  # font(sub_label) <- c(size=10,weight="bold")
+  # gslider_intervall <- gslider(from = 4, to = 20, by = 2, container=win_SI_1) #only even numbers possible: use default value and number/2 parts above and below default value
+  # svalue(gslider_intervall, index=TRUE)
+  # svalue(gslider_intervall) <- 4
+
+  win_SI_1 <- gwindow("Slider with Interval Display")
+  sub_label <- glabel("3. Select Interval Density", container = win_SI_1)
+  font(sub_label) <- c(size = 10, weight = "bold")
+
+  gslider_intervall <- gslider(from = 4, to = 20, by = 2, container = win_SI_1)
+  svalue(gslider_intervall) <- 4  
+
+  value_label <- glabel("Current value: 4", container = win_SI_1)
 
   addHandlerChanged(gslider_intervall, handler = function(h, ...) {
-  current_value <- svalue(h$obj)   
-  svalue(value_label) <- paste("Current value:", current_value) 
+    current_value <- svalue(h$obj)
+    svalue(value_label) <- paste("Current value:", current_value)
   })
 
   gseparator(horizontal=TRUE, container=win_SI_1, expand=TRUE) 
