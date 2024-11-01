@@ -43,6 +43,11 @@ function(workspace){
   svalue(gslider_intervall, index=TRUE)
   svalue(gslider_intervall) <- 4
 
+  addHandlerChanged(gslider_intervall, handler = function(h, ...) {
+  current_value <- svalue(h$obj)   
+  svalue(value_label) <- paste("Current value:", current_value) 
+  })
+
   gseparator(horizontal=TRUE, container=win_SI_1, expand=TRUE) 
   win_SI_3 <- ggroup(horizontal = TRUE, container=win_SI_1, fill=TRUE )
 

@@ -1,7 +1,7 @@
 get_parameter <-
 function(workspace, ...) {#start function
 
-  #get glm2.nml
+  #get glm3.nml
   nml_file = file.path(workspace,"glm3.nml")
   #run_glm(eg_folder)
   #suppressWarnings(eg_nml <-read_nml(nml_file))
@@ -18,7 +18,7 @@ function(workspace, ...) {#start function
     
    
     main_sub_value <- ggroup(container = main_sub,horizontal = TRUE)
-    zaehler<- 1
+    counter<- 1
     gsetup<- ggroup(container = main_sub_value,horizontal = TRUE) 
     gcolumn<- ggroup(container = gsetup,horizontal = FALSE)
     
@@ -50,9 +50,9 @@ function(workspace, ...) {#start function
         
       
         #create columns
-      zaehler<- zaehler +1 
-      if (zaehler>2){gcolumn<- ggroup(container = gsetup,horizontal = FALSE)
-        zaehler <-1
+      counter<- counter +1 
+      if (counter>2){gcolumn<- ggroup(container = gsetup,horizontal = FALSE)
+        counter <-1
       }
     }
     if(i!=length(names(eg_nml))){gseparator(horizontal=TRUE, container=main_sub, expand=TRUE)}
