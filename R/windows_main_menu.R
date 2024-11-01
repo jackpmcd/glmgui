@@ -291,7 +291,7 @@ function(version){
     # else {completepath = paste(libpath,glmrpath, sep = '/')
     # glmversion = readChar(completepath, nchars = 10)
     glm_verison <- capture.output(glm_version())
-    gmessage(glm_version, title = 'GLM Version')}})
+    gmessage(glm_version, title = 'GLM Version')})
     
   
   gseparator(horizontal=TRUE, container=content_project, expand=TRUE) 
