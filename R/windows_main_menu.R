@@ -285,8 +285,9 @@ function(version){
   
   #Button for reading the GLM Version of package GLMr; GLMr::glm_version() only runs run_glm(), so that the version is printed to the console, but can't be saved as char or even copied to file via sink()
   gbutton("GLM Version", container = content_project_build2, handler=function(h,...) {
-    glm_verison <- glm_version(as_char = TRUE)
-    gmessage("The current version of GLM is ", glm_version, title = 'GLM Version')})
+    glm_version <- glm_version(as_char = TRUE)
+    gmessage(paste("The current version of GLM is", glm_version, sep=" "), title = 'GLM Version')})
+
     
   
   gseparator(horizontal=TRUE, container=content_project, expand=TRUE) 
